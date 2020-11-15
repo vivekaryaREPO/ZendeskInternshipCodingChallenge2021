@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ZendeskInternshipCodingChallenge2021';
+  textContent="ZendeskInternshipCodingChallenge2021";
 }

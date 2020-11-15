@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- All rights reserved with Vivek Arya
+Copyright (c) 2021 -->
+<html lang="en">
+<head>
+    <title>Vivek Arya</title>   
+</head>
+<body>
+    <div style="padding-left: 10px;padding-right: 10px;" *ngIf="ticketList!=null">
+        <div class="container" style="padding-top: 50px;padding-left: 5px;padding-right: 5px;">
+            <div class="row">
+                    <div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title text-center">
+                                    <span>TICKET VIEWER SYSTEM</span>
+                                    
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                    <div>
+                                      <h5 align="right" *ngIf="filteredTicketList.length>25">
+                                          <pagination-controls id="listing_pagination" maxSize="{{noOfPagesInPagination}}" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+                                          <span>
+                                              <table>
+                                                  <tr >
+                                                      <th>TOTAL TICKETS:</th>
+                                                      <td>{{total}}</td>
+                                                  </tr>
+                                                  <tr >
+                                                    <th>NEW TICKETS:</th>
+                                                    <td>{{open}}</td>
+                                                  </tr>
+                                                  <tr >
+                                                    <th>OPEN TICKETS:</th>
+                                                    <td>{{new}}</td>
+                                                  </tr>
+                                                  <tr >
+                                                    <th>CLOSED TICKETS:</th>
+                                                    <td>{{closed}}</td>
+                                                  </tr>
+                                              </table>
+                                          </span>
+                                      
+                                          
+                                      </h5>                                     
+                                    </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr class="info">
+                                                <th>TICKET ID
+                                                    <button class="btn btn-info btn-sm" (click)="showTicketFilter=!showTicketFilter">
+                                                        <span class="glyphicon glyphicon-filter"></span> Filter 
+                                                      </button>
+                                                    <div *ngIf="showTicketFilter"> 
+                                                        <h5><input type="text" placeholder="Search Ticket By id .." name="searchedId" [(ngModel)]="searchedId" (input)="filterTicketList()" /> </h5>
+                                                    </div>
+                    
+                                                </th>
+                                                <th>TICKET SUBJECT</th>
+                                                <th>DATE CREATED</th>
+                                                <th>TICKET STATUS  
+                                                    <button class="btn btn-info btn-sm" (click)="showStatusFilter=!showStatusFilter">
+                                                      <span class="glyphicon glyphicon-filter"></span> Filter 
+                                                    </button>
+                                                    <div *ngIf="showStatusFilter">
+                                                            <h5>
+                                                             <span>all: <input type="radio" name="filterByStatus" [(ngModel)]="status" (change)="filterTicketList()" value="all"></span>
+                                                             <span>new: <input type="radio" name="filterByStatus" [(ngModel)]="status" (change)="filterTicketList()" value="new"></span>   
+                                                             <span>open:<input type="radio" name="filterByStatus" [(ngModel)]="status" (change)="filterTicketList()" value="open"></span>   
+                                                             <span>closed:<input type="radio" name="filterByStatus" [(ngModel)]="status" (change)="filterTicketList()" value="closed"></span>  
+                                                            </h5>
+                                                    </div>
+                                                </th>
+                                                <th>DETAILS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>           
+                                                <tr (click)="firstLoad()" *ngFor="let ticket of filteredTicketList|paginate:{id:'listing_pagination',itemsPerPage:25,currentPage:page,totalItems:totalRecords} ;trackBy:trackByTicketId" [routerLink]="['/ticketdetails',ticket.id]">
+                                                    <td scope="row">{{ticket.id}}</td>
+                                                    <td scope="row">{{ticket.subject}}</td>
+                                                    <td scope="row">{{ticket.created_at |date:'medium'}}</td>
+                                                    <td scope="row">{{ticket.status}}</td>
+                                                    <td scope="row" [routerLink]="['/ticketdetails',ticket.id]"><a [routerLink]="['/ticketdetails',ticket.id]">Cick here for details</a></td>                 
+                                                </tr>
+                                                <tr *ngIf="idNotFound && statusNotFound" class="danger" align="center">
+                                                    <td colspan="4">
+                                                        <h3><span><b>{{'No ticket with id '+searchedId+' and status '+status+' found, '}}</b></span></h3>
+                                                        <span><b>Please try using different filters</b></span>
+                                                    </td>                                                    
+                                                </tr>
+                                                <tr *ngIf="idNotFound && (!statusNotFound)" class="danger" align="center">
+                                                    <td colspan="4">
+                                                        <h3><span><b>{{'No ticket with id '+searchedId+' found in the list'}}</b></span></h3>
+                                                        <span><b>Please try using different filters</b></span>
+                                                    </td>                                                    
+                                                </tr>
+                                                <tr *ngIf="statusNotFound && (!idNotFound )" class="danger" align="center">
+                                                    <td colspan="4">
+                                                        <h3><span><b>{{'No ticket with status "'+status+'" found'}}</b></span></h3>
+                                                        <span><b>Please try using different filters</b></span>
+                                                    </td>                                                    
+                                                </tr>
+                                            
+                                        </tbody>
+                                
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="panel-footer ">
+                                <div>
+                                    <h5 class="text-center" *ngIf="filteredTicketList.length>25">
+                                      <pagination-controls  id="listing_pagination" maxSize="{{noOfPagesInPagination}}" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+                                    </h5>
+                                  </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+            </div>
+            </div>
+
+    </div>
+
+    <div style="padding-top: 200px;" align="center" *ngIf="(ticketList==null)&&(!errorWithService)">
+        <div class="container">
+          <div class="row">
+            <div class="loader"></div>
+          </div>
+        </div>
+        <h2> Loading ticket list, please wait...</h2>
+     </div>
+
+      <div style="padding-top: 200px;" align="center" *ngIf="errorWithService">
+        <div class="container">
+          <div class="row">
+              <div class="alert alert-danger">
+                <h1><strong>Problem with service endpoints, please try again.</strong> </h1>
+              </div>
+              <div>
+                <a (click)="reload()" class="btn btn-info btn-lg">
+                    <span  class="glyphicon glyphicon-repeat"></span> Retry
+                  </a>
+              </div>
+            
+          </div>
+        </div>
+
+     </div>
+
+</body>
+</html>
+
+
+
+    

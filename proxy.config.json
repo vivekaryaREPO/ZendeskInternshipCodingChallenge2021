@@ -1,0 +1,7 @@
+{
+    "/api": {
+      "target": "https://internvivek.zendesk.com",
+      "secure": true,
+      "changeOrigin":true
+      }
+    }

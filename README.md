@@ -2,26 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
-## Development server
+INSTRUCTIONS TO RUN THIS PROJECT
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+STEP 1: Download the zip file at any location in your machine.
 
-## Code scaffolding
+Eg.	F:\zendesk
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+STEP 2: Extract the “ZendeskInternshipCodingChallenge2021.zip” file you just downloaded, in the same directory. After the extraction process is complete, you should see the project folder generated in the same directory with the name   “ZendeskInternshipCodingChallenge2021”  
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+STEP 3: The step 3 is to install Node.js and npm, both are part of single download. It is recommended that you have node version 4.6.x or greater and npm 3.x.x or greater. To check the versions that you have on your machine type the following commands in a command window. 
 
-## Running end-to-end tests
+node -v 
+npm -v 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+You can get the latest version of Node.js from the following website. https://nodejs.org/en/download
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+STEP 4: Open the extracted project from your command prompt, and run the project by typing the below command in the command prompt:
+
+npm start
+
+
+STEP 5: After you’ve typed the above command, the project will be compiled and the corresponding URL at which the project is ready to be verified will be generated, you can open your favorite browser and paste that generated link in the address bar. 
+The second last line after the “compiled successfully” message in the command prompt clearly shows the url at which the project is listening. In my case it’s  http://localhost:4200/ 	
+
+Most of the time the angular project run on port number 4200 only, so the above URL should work for you too.
