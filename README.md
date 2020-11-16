@@ -27,9 +27,21 @@ Step 2: Once cloned, navigate to folder ZendeskInternshipCodingChallenge2021 thr
 		
 		eg F:\>cd ZendeskInternshipCodingChallenge2021
 
-Step 3: Enter command npm start
+Step 3: Enter command npm start and observe the logs.
 
 		eg: F:\ZendeskInternshipCodingChallenge2021>npm start
+
+			> zendesk-internship-coding-challenge2021@0.0.0 start F:\ZendeskInternshipCodingChallenge2021
+			> ng serve --proxy-config proxy.config.json
+
+			chunk {main} main.js, main.js.map (main) 102 kB [initial] [rendered]
+			chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 144 kB [initial] [rendered]
+			chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+			chunk {styles} styles.js, styles.js.map (styles) 15 kB [initial] [rendered]
+			chunk {vendor} vendor.js, vendor.js.map (vendor) 3.15 MB [initial] [rendered]
+			Date: 2020-11-16T01:01:42.826Z - Hash: fba2b52d8f14168a3e05 - Time: 17446ms
+			** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+			: Compiled successfully.
 
 Step 4: Open your favourite browser and enter the URL http://localhost:4200/ to view the application.
 		NOTE: Ensure from npm start logs, that node server started on 4200 port. if not replace 4200 with the appropriate port.
@@ -42,9 +54,21 @@ Step 3: Navigate to unzipped folder through command prompt as shown below.
 		
 			eg F:\>cd ZendeskInternshipCodingChallenge2021
 			
-Step 4: Enter command npm start
+Step 4: Enter command npm start and observe the logs.
 	
 		eg: F:\ZendeskInternshipCodingChallenge2021>npm start
+		
+			> zendesk-internship-coding-challenge2021@0.0.0 start F:\ZendeskInternshipCodingChallenge2021
+			> ng serve --proxy-config proxy.config.json
+
+			chunk {main} main.js, main.js.map (main) 102 kB [initial] [rendered]
+			chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 144 kB [initial] [rendered]
+			chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+			chunk {styles} styles.js, styles.js.map (styles) 15 kB [initial] [rendered]
+			chunk {vendor} vendor.js, vendor.js.map (vendor) 3.15 MB [initial] [rendered]
+			Date: 2020-11-16T01:01:42.826Z - Hash: fba2b52d8f14168a3e05 - Time: 17446ms
+			** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+			: Compiled successfully.
 
 Step 5: Open your favourite browser and enter the URL http://localhost:4200/ to check the application.
 		NOTE: ensure from npm start logs that node server started on 4200 port. if not replace 4200 with the appropriate port.
