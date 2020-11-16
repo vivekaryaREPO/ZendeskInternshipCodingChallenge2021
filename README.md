@@ -62,13 +62,13 @@ Step 2: Unzip the file with winrar or any other unzipper software.
 
 Step 3: Navigate to unzipped folder through command prompt as shown below.
 		
-			eg F:\>cd ZendeskInternshipCodingChallenge2021
+			eg F:\>cd ZendeskInternshipCodingChallenge2021-main
 			
 Step 4: Enter command npm start and observe the logs.
 	
-			eg: F:\ZendeskInternshipCodingChallenge2021>npm start
+			eg: F:\ZendeskInternshipCodingChallenge2021-main>npm start
 		
-			> zendesk-internship-coding-challenge2021@0.0.0 start F:\ZendeskInternshipCodingChallenge2021
+			> zendesk-internship-coding-challenge2021@0.0.0 start F:\ZendeskInternshipCodingChallenge2021-main
 			> ng serve --proxy-config proxy.config.json
 
 			chunk {main} main.js, main.js.map (main) 102 kB [initial] [rendered]
