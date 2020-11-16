@@ -50,7 +50,6 @@ Step 3: Enter command npm start and observe the logs.
 Step 4: Open your favourite browser and enter the URL http://localhost:4200/ to view the application.
 		
 		NOTE: Ensure from npm start logs, that node server started on 4200 port. if not replace 4200 with the appropriate port.
-		====
 
 Procedure 2 :
 =============
@@ -83,4 +82,3 @@ Step 4: Enter command npm start and observe the logs.
 Step 5: Open your favourite browser and enter the URL http://localhost:4200/ to check the application.
 		
 		NOTE: ensure from npm start logs that node server started on 4200 port. if not replace 4200 with the appropriate port.
-		====
