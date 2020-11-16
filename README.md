@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 INSTRUCTIONS TO RUN THIS PROJECT:
 
+Prerequisite :
+===============
 Install Node.js and npm, both are part of single download. 
 It is recommended that you have node version 4.6.x or greater and npm 3.x.x or greater.You can get the latest version of Node.js from the following website. https://nodejs.org/en/download . Once installed, check their versions with node -v and npm -v commands as shown below :
 
@@ -15,6 +17,8 @@ It is recommended that you have node version 4.6.x or greater and npm 3.x.x or g
 	C:\Users\Vivek Arya>npm -v
 	6.14.5
 
+Procedure 1 :
+=============
 If git is installed in your machine :
 
 STEP 1: Clone the git repository at any location with the below command and example :
@@ -46,6 +50,8 @@ Step 3: Enter command npm start and observe the logs.
 Step 4: Open your favourite browser and enter the URL http://localhost:4200/ to view the application.
 		NOTE: Ensure from npm start logs, that node server started on 4200 port. if not replace 4200 with the appropriate port.
 
+Procedure 2 :
+=============
 If git is not installed in your machine :
 
 Step 1: Download the zip file at any location in your machine.
